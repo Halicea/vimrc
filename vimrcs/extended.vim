@@ -10,7 +10,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
 if has("mac") || has("macunix")
-    set gfn=Source\ Code\ Pro:h15,Menlo:h15
+    set gfn=Source\ Code\ Pro:h12,Menlo:h12
 elseif has("win16") || has("win32")
     set gfn=Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("linux")
@@ -22,7 +22,7 @@ endif
 " Open MacVim in fullscreen mode
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz
-    au GUIEnter * set fullscreen
+    "au GUIEnter * set fullscreen
 endif
 
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)

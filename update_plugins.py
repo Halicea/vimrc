@@ -39,6 +39,9 @@ syntastic https://github.com/scrooloose/syntastic
 vim-repeat https://github.com/tpope/vim-repeat
 vim-commentary https://github.com/tpope/vim-commentary
 vim-golang https://github.com/jnwhiteh/vim-golang
+vim-node https://github.com/moll/vim-node
+jsbeautify https://github.com/maksimr/vim-jsbeautify
+vim-spec https://github.com/geekjuice/vim-spec
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
