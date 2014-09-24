@@ -1,4 +1,8 @@
+
 # The Ultimate vimrc
+This is a fork of [https://github.com/amix/vimrc](https://github.com/amix/vimrc) repository customized for my own needs.
+
+##The Readme bellow is written by the original [author](https://github.com/amix/) of this repository##
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
 
