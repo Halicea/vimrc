@@ -19,4 +19,11 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+"add new lines above and bellow without exiting normal mode 
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+"easier escape from inser mode 
+imap <S-Enter> <Esc>
+
 

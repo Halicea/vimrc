@@ -42,6 +42,7 @@ vim-golang https://github.com/jnwhiteh/vim-golang
 vim-node https://github.com/moll/vim-node
 jsbeautify https://github.com/maksimr/vim-jsbeautify
 vim-spec https://github.com/geekjuice/vim-spec
+vim-autoclose https://github.com/Townk/vim-autoclose
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
