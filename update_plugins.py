@@ -6,7 +6,7 @@ import requests
 from os import path
 
 
-#--- Globals ----------------------------------------------
+# --- Globals ----------------------------------------------
 PLUGINS = """
 ack.vim https://github.com/mileszs/ack.vim
 bufexplorer https://github.com/corntrace/bufexplorer
@@ -43,6 +43,9 @@ vim-node https://github.com/moll/vim-node
 jsbeautify https://github.com/maksimr/vim-jsbeautify
 vim-spec https://github.com/geekjuice/vim-spec
 vim-autoclose https://github.com/Townk/vim-autoclose
+dirdo https://github.com/vim-scripts/DirDo.vim
+python-mode https://github.com/klen/python-mode
+gist-vim https://github.com/mattn/gist-vim
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
