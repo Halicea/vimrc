@@ -5,7 +5,6 @@ import requests
 
 from os import path
 
-
 # --- Globals ----------------------------------------------
 PLUGINS = """
 ack.vim https://github.com/mileszs/ack.vim

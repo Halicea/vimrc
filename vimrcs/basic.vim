@@ -136,7 +136,7 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme peaksea
 catch
 endtry
 
@@ -224,11 +224,11 @@ map <leader>bd :Bclose<cr>
 map <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+map <leader>tc :tabnew<cr>
 map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
+map <leader>tx :tabclose<cr>
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tn :tabnext<CR>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -342,10 +342,10 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+map <leader>q :q<cr>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+map <leader>x :e ~/buffer<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>

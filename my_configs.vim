@@ -9,22 +9,22 @@ set nofullscreen
 "clear search highlights
 nnoremap <F3> :set hlsearch!<CR>
 
-"clear line numbers
-nnoremap <F4> :set nu<CR>
-nnoremap <F5> :set nu!<CR>
+"toggle line numbers
+nnoremap <F4> :set nu!<CR>
 
-"Spec runner 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+"Git shortcuts
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gh :Gdiff ~
+nnoremap <Leader>gp :Gpush origin 
+nnoremap <Leader>gl :Gpull origin 
 
 "add new lines above and bellow without exiting normal mode 
 nmap <S-Enter> O<Esc>
-"nmap <CR> o<Esc>
+nmap <C-Enter> o<Esc>
 
-"easier escape from inser mode 
-imap <S-Enter> <Esc>
+"easier escape from insert mode 
+imap <Leader>/ <Esc>
 
 "Go stuff
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -48,8 +48,9 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 let g:go_play_open_browser = 0
 let g:go_fmt_command = "goimports"
 
+au VimEnter * NERDTree
 "By default vim-go shows errors for the fmt command, to disable it:
-"let g:go_fmt_fail_silently = 1
+let g:go_fmt_fail_silently = 1
 
 "Change the build path
 "let g:go_bin_path = expand("~/.gotools")
@@ -58,3 +59,6 @@ let g:go_fmt_command = "goimports"
 "Disable auto save
 "let g:go_fmt_autosave = 0
 
+let g:pymode_lint_ignore="E111,E302,E501,W601"
+
+colorscheme peaksea
