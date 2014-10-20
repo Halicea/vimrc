@@ -12,6 +12,7 @@ bufexplorer https://github.com/corntrace/bufexplorer
 ctrlp.vim https://github.com/kien/ctrlp.vim
 mayansmoke https://github.com/vim-scripts/mayansmoke
 nerdtree https://github.com/scrooloose/nerdtree
+vim-nerdtree-tabs.git https://github.com/jistr/vim-nerdtree-tabs.git
 nginx.vim https://github.com/vim-scripts/nginx.vim
 open_file_under_cursor.vim https://github.com/amix/open_file_under_cursor.vim
 snipmate-snippets https://github.com/scrooloose/snipmate-snippets
@@ -45,6 +46,7 @@ vim-autoclose https://github.com/Townk/vim-autoclose
 dirdo https://github.com/vim-scripts/DirDo.vim
 python-mode https://github.com/klen/python-mode
 gist-vim https://github.com/mattn/gist-vim
+javascript-libraries-syntax.vim https://github.com/othree/javascript-libraries-syntax.vim
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'

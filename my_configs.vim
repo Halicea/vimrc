@@ -1,3 +1,6 @@
+"start autocompletion on startup
+let g:neocomplcache_enable_at_startup = 1
+
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 au FileType javascript call JavaScriptFold()
 " tabs setup
@@ -24,7 +27,8 @@ nmap <S-Enter> O<Esc>
 nmap <C-Enter> o<Esc>
 
 "easier escape from insert mode 
-imap <Leader>/ <Esc>
+imap jk <Esc>
+imap kj <Esc>
 
 "Go stuff
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -48,7 +52,11 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 let g:go_play_open_browser = 0
 let g:go_fmt_command = "goimports"
 
-au VimEnter * NERDTree
+"start nerdtree on start
+"au VimEnter * NERDTree
+
+"Unfold everything
+"au BufRead * normal zR
 "By default vim-go shows errors for the fmt command, to disable it:
 let g:go_fmt_fail_silently = 1
 
