@@ -12,7 +12,7 @@ bufexplorer https://github.com/corntrace/bufexplorer
 ctrlp.vim https://github.com/kien/ctrlp.vim
 mayansmoke https://github.com/vim-scripts/mayansmoke
 nerdtree https://github.com/scrooloose/nerdtree
-vim-nerdtree-tabs.git https://github.com/jistr/vim-nerdtree-tabs.git
+vim-nerdtree-tabs https://github.com/jistr/vim-nerdtree-tabs
 nginx.vim https://github.com/vim-scripts/nginx.vim
 open_file_under_cursor.vim https://github.com/amix/open_file_under_cursor.vim
 snipmate-snippets https://github.com/scrooloose/snipmate-snippets
@@ -40,10 +40,10 @@ vim-repeat https://github.com/tpope/vim-repeat
 vim-commentary https://github.com/tpope/vim-commentary
 vim-golang https://github.com/jnwhiteh/vim-golang
 vim-node https://github.com/moll/vim-node
-jsbeautify https://github.com/maksimr/vim-jsbeautify
+vim-jsbeautify https://github.com/maksimr/vim-jsbeautify
 vim-spec https://github.com/geekjuice/vim-spec
 vim-autoclose https://github.com/Townk/vim-autoclose
-dirdo https://github.com/vim-scripts/DirDo.vim
+DirDo.vim https://github.com/vim-scripts/DirDo.vim
 python-mode https://github.com/klen/python-mode
 gist-vim https://github.com/mattn/gist-vim
 javascript-libraries-syntax.vim https://github.com/othree/javascript-libraries-syntax.vim

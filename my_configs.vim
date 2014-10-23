@@ -22,15 +22,14 @@ nnoremap <F4> :set nu!<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gh :Gdiff ~
-nnoremap <Leader>gp :Gpush origin 
-nnoremap <Leader>gl :Gpull origin 
-
+nnoremap <Leader>gp :Gpush origin
+nnoremap <Leader>gl :Gpull origin
 nnoremap <Leader>wq :wq<CR>
-"add new lines above and bellow without exiting normal mode 
+"add new lines above and bellow without exiting normal mode
 nmap <S-Enter> O<Esc>
 nmap <C-Enter> o<Esc>
 
-"easier escape from insert mode 
+"easier escape from insert mode
 imap jk <Esc>
 imap kj <Esc>
 
@@ -70,16 +69,16 @@ let g:go_fmt_fail_silently = 1
 "let g:go_fmt_autosave = 0
 
 "Python related setup
-au FileType python setlocal omnifunc=pythoncomplete#Complete
+"au FileType python setlocal omnifunc=pythoncomplete#Complete
 "start autocompletion on startup
-let g:neocomplcache_enable_at_startup = 1
-iab ipdb import ipdb; ipdb.set_trace()
-iab utf! # -*- coding: utf-8 -*-
+"let g:neocomplcache_enable_at_startup = 1
+"iab ipdb import ipdb; ipdb.set_trace()
+"iab utf! # -*- coding: utf-8 -*-
 "set completeopt-=preview
+let g:pymode_rope_completion = 1
+"let g:pymode_options = 0
+"let g:pymode_lint_write = 0
+let g:pymode_folding = 0
 let g:pymode_lint_ignore="E111,E302,E501,W601"
-let g:pymode_options = 0
-let g:pymode_lint_write = 0 “не проверять при каждом сохранении
-let g:pymode_folding = 0 “мне не нужен авто-фолдинг
-"let g:pymode_rope_vim_completion = 0 “не использовать автодополнение rope
-
+let g:pymode_rope_goto_definition_cmd = 'vnew'
 colorscheme peaksea
