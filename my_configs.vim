@@ -17,11 +17,11 @@ nnoremap <F3> :set hlsearch!<CR>
 
 "toggle line numbers
 nnoremap <F4> :set nu!<CR>
-
 "Git shortcuts
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>gh :Gdiff ~
+nnoremap <Leader>gr :Git checkout %
+nnoremap <Leader>gh :Giff ~
 nnoremap <Leader>gp :Gpush origin
 nnoremap <Leader>gl :Gpull origin
 nnoremap <Leader>wq :wq<CR>
@@ -75,10 +75,10 @@ let g:go_fmt_fail_silently = 1
 "iab ipdb import ipdb; ipdb.set_trace()
 "iab utf! # -*- coding: utf-8 -*-
 "set completeopt-=preview
-let g:pymode_rope_completion = 1
+"let g:pymode_rope_completion = 1
 "let g:pymode_options = 0
 "let g:pymode_lint_write = 0
-let g:pymode_folding = 0
-let g:pymode_lint_ignore="E111,E302,E501,W601"
-let g:pymode_rope_goto_definition_cmd = 'vnew'
+"let g:pymode_folding = 0
+"let g:pymode_lint_ignore="E111,E302,E501,W601"
+"let g:pymode_rope_goto_definition_cmd = 'vnew'
 colorscheme peaksea

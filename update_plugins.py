@@ -47,6 +47,8 @@ DirDo.vim https://github.com/vim-scripts/DirDo.vim
 python-mode https://github.com/klen/python-mode
 gist-vim https://github.com/mattn/gist-vim
 javascript-libraries-syntax.vim https://github.com/othree/javascript-libraries-syntax.vim
+vim-fireplace https://github.com/tpope/vim-fireplace
+vim-clojure-static https://guns/vim-clojure-static
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
