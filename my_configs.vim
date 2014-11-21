@@ -12,6 +12,10 @@ let g:tagbar_sort = 0 "tagbar shows tags in order of they created in file
 let g:tagbar_foldlevel = 0 "close tagbar folds by default
 let g:tagbar_autofocus = 1
 
+" typescript setup
+au BufRead,BufNewFile *.ts        setlocal filetype=typescript
+set rtp+=/usr/local/lib/node_modules/typescript-tools
+
 "clear search highlights
 nnoremap <F3> :set hlsearch!<CR>
 
@@ -25,13 +29,21 @@ nnoremap <Leader>gh :Giff ~
 nnoremap <Leader>gp :Gpush origin
 nnoremap <Leader>gl :Gpull origin
 nnoremap <Leader>wq :wq<CR>
+nnoremap ; :
+
+"buffers movement
+nmap <leader>s<left>   :leftabove  vnew<CR>
+nmap <leader>s<right>  :rightbelow vnew<CR>
+nmap <leader>s<up>     :leftabove  new<CR>
+nmap <leader>s<down>   :rightbelow new<CR>
+
 "add new lines above and bellow without exiting normal mode
-nmap <S-Enter> O<Esc>
-nmap <C-Enter> o<Esc>
+nnoremap <S-Enter> O<Esc>
+nnoremap <C-Enter> o<Esc>
 
 "easier escape from insert mode
-imap jk <Esc>
-imap kj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 "Go stuff
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -81,4 +93,5 @@ let g:go_fmt_fail_silently = 1
 "let g:pymode_folding = 0
 "let g:pymode_lint_ignore="E111,E302,E501,W601"
 "let g:pymode_rope_goto_definition_cmd = 'vnew'
+
 colorscheme peaksea

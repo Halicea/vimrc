@@ -1,0 +1,103 @@
+*jekyll.txt* Blogging from the command line should not be tedious.
+
+Author: Joshua Priddle <jpriddle@me.com>
+
+==============================================================================
+INTRODUCTION                                    *jekyll*
+
+This script is intended to automate the process of creating and editing
+Jekyll (http://jekyllrb.com/) blog posts from within vim.
+
+This is complete rewrite of csexton/jekyll.vim
+(https://github.com/csexton/jekyll.vim/) with these improvements:
+
+* Commands to edit/split/vsplit/tabnew a post
+* Tab completion for opening existing posts
+* Recognizes Octopress blogs and others with custom `_posts` directory
+* Customizable template for new posts
+* Customizable build command, with automatic support for bundler
+
+==============================================================================
+CONFIGURATION                                   *jekyll-configuration*
+
+There are a few global variables that can be set to adjust the way vim handles
+Jekyll blogs. Default values for each are listed below unless noted.
+
+                                                *g:jekyll_post_dirs*  >
+    let g:jekyll_post_dirs = ['_posts', '_source/_posts']
+A |List| containing paths to search to identify a Jekyll blog's posts
+directory. For most Jekyll blogs, this will be `_posts`. Octopress posts are
+kept in `_source/_posts`.
+
+                                                *g:jekyll_post_extension*  >
+    let g:jekyll_post_extension = '.markdown'
+The extension used when creating new posts.
+
+                                                *g:jekyll_post_filetype*  >
+    let g:jekyll_post_filetype = 'liquid'
+The |filetype| used when creating new posts.
+
+                                                *g:jekyll_post_template*  >
+    let g:jekyll_post_template =  [
+      \ '---',
+      \ 'layout: post',
+      \ 'title: "JEKYLL_TITLE"',
+      \ 'date: "JEKYLL_DATE"',
+      \ '---',
+      \ '']
+A |List| containing lines to used as a template when creating new posts.
+JEKYLL_DATE and JEKYLL_TITLE will be replaced with their real values.
+
+                                                *g:jekyll_site_dir*  >
+    let g:jekyll_site_dir = '_site'
+Directory to place generated files in when running the |:Jbuild| command.
+Relative to the root of your blog.
+
+                                                *g:jekyll_build_command*  >
+    let g:jekyll_build_command = 'jekyll --no-auto --no-server'
+Custom command to use to build your blog. By default this is unset.
+
+==============================================================================
+COMMANDS                                        *jekyll-commands*
+
+The |:Jpost| (Jekyll post) command is used to create and edit blog posts. It
+has variants for opening a post in a horizontal or vertical split or a new
+tab. Call with a bang, (eg: :Jpost!) to create a new post. Call without a bang
+(eg: :Jpost) to edit a post. The |:Jbuild| command can be used to build a
+blog.
+
+                                                *jekyll-:Jpost*
+:Jpost[!]  [{name}] Create or edit the specified post. With no argument, you
+                    will be prompted to select a post or enter a title.
+
+                                                *jekyll-:JSpost*
+:JSpost[!] [{name}] Same as |:Jpost|, but opens post in a horizontal split.
+
+                                                *jekyll-:JVpost*
+:JVpost[!] [{name}] Same as |:Jpost|, but opens post in a vertical split.
+
+                                                *jekyll-:JTpost*
+:JTpost[!] [{name}] Same as |:Jpost|, but opens post in a tab.
+
+                                                *jekyll-:Jbuild*
+:Jbuild [{args}]    Generate blog. This will check for the presence of a
+                    Gemfile; if found `bundle exec` is used to run the
+                    `jekyll` command. The blog will be built with: >
+
+            jekyll --no-auto --no-server BLOG_ROOT BLOG_ROOT/SITE_DIR <args>
+<
+                    If this doesn't fit your situation, you can set a custom
+                    command with |g:jekyll_build_command|. When using a custom
+                    command no check for a Gemfile is performed.
+
+==============================================================================
+ABOUT                                           *jekyll-about*
+
+Grab the latest version or report a bug on Github:
+
+https://github.com/itspriddle/vim-jekyll/
+
+                                                *jekyll-license*
+Distributed under the same terms as Vim itself. See |license|.
+
+ vim:tw=78:et:ft=help:norl:
