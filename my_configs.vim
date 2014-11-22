@@ -16,6 +16,18 @@ let g:tagbar_autofocus = 1
 au BufRead,BufNewFile *.ts        setlocal filetype=typescript
 set rtp+=/usr/local/lib/node_modules/typescript-tools
 
+" jekyll setup 
+
+let g:jekyll_post_extension = '.md'
+let g:jekyll_post_template =  [
+    \ '---',
+    \ 'layout: post',
+    \ 'title: "JEKYLL_TITLE"',
+    \ 'date: "JEKYLL_DATE"',
+    \ '---',
+    \ '']
+
+
 "clear search highlights
 nnoremap <F3> :set hlsearch!<CR>
 
@@ -32,10 +44,10 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap ; :
 
 "buffers movement
-nmap <leader>s<left>   :leftabove  vnew<CR>
-nmap <leader>s<right>  :rightbelow vnew<CR>
-nmap <leader>s<up>     :leftabove  new<CR>
-nmap <leader>s<down>   :rightbelow new<CR>
+nmap <leader>sh :leftabove  vnew<CR>
+nmap <leader>sl :rightbelow vnew<CR>
+nmap <leader>sk :leftabove  new<CR>
+nmap <leader>sj :rightbelow new<CR>
 
 "add new lines above and bellow without exiting normal mode
 nnoremap <S-Enter> O<Esc>
