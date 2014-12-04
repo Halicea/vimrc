@@ -80,7 +80,7 @@ map <leader>nn :NERDTreeToggle<cr>
 map <F9> :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.DS_Store']
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
