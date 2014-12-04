@@ -1,6 +1,12 @@
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+au FileType python setlocal omnifunc=pythoncomplete#Complete
 au FileType javascript call JavaScriptFold()
+
+"make the autocomplete better accessible
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
+
 " tabs setup
 set tabstop=2
 set shiftwidth=2
@@ -12,12 +18,15 @@ let g:tagbar_sort = 0 "tagbar shows tags in order of they created in file
 let g:tagbar_foldlevel = 0 "close tagbar folds by default
 let g:tagbar_autofocus = 1
 
+" haskell setup 
+au BufRead,BufNewFile *.hs setlocal filetype=haskell
+au FileType haskell setlocal omnifunc=necoghc#omnifunc
+
 " typescript setup
 au BufRead,BufNewFile *.ts        setlocal filetype=typescript
 set rtp+=/usr/local/lib/node_modules/typescript-tools
 
 " jekyll setup 
-
 let g:jekyll_post_extension = '.md'
 let g:jekyll_post_template =  [
     \ '---',
@@ -38,8 +47,8 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gr :Git checkout %
 nnoremap <Leader>gh :Giff ~
-nnoremap <Leader>gp :Gpush origin
-nnoremap <Leader>gl :Gpull origin
+nnoremap <Leader>gp :Gpush origin 
+nnoremap <Leader>gl :Gpull origin 
 nnoremap <Leader>wq :wq<CR>
 nnoremap ; :
 
@@ -53,9 +62,7 @@ nmap <leader>sj :rightbelow new<CR>
 nnoremap <S-Enter> O<Esc>
 nnoremap <C-Enter> o<Esc>
 
-"easier escape from insert mode
-inoremap jk <Esc>
-inoremap kj <Esc>
+let g:used_javascript_libs = 'backbone,jquery,underscore,backbone,angularjs,requirejs,jasmine'
 
 "Go stuff
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -93,17 +100,16 @@ let g:go_fmt_fail_silently = 1
 "let g:go_fmt_autosave = 0
 
 "Python related setup
-"au FileType python setlocal omnifunc=pythoncomplete#Complete
 "start autocompletion on startup
 "let g:neocomplcache_enable_at_startup = 1
 "iab ipdb import ipdb; ipdb.set_trace()
-"iab utf! # -*- coding: utf-8 -*-
+iab utf! # -*- coding: utf-8 -*-
 "set completeopt-=preview
 "let g:pymode_rope_completion = 1
 "let g:pymode_options = 0
 "let g:pymode_lint_write = 0
 "let g:pymode_folding = 0
-"let g:pymode_lint_ignore="E111,E302,E501,W601"
-"let g:pymode_rope_goto_definition_cmd = 'vnew'
+let g:pymode_lint_ignore="E111,E302,E501,W601"
+let g:pymode_rope_goto_definition_cmd = 'vnew'
 
 colorscheme peaksea

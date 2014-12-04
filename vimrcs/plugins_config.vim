@@ -80,6 +80,7 @@ map <leader>nn :NERDTreeToggle<cr>
 map <F9> :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
+let NERDTreeIgnore = ['\.pyc$']
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,3 +115,4 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers=['pyflakes']
+let g:syntastic_javascript_checkers = ['jshint']
