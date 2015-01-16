@@ -62,6 +62,7 @@ nmap <leader>sj :rightbelow new<CR>
 nnoremap <S-Enter> O<Esc>
 nnoremap <C-Enter> o<Esc>
 
+au FileType markdown nnoremap <Leader>p :Preview<CR>
 let g:used_javascript_libs = 'backbone,jquery,underscore,backbone,angularjs,requirejs,jasmine'
 
 "Go stuff
@@ -85,7 +86,6 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 let g:go_play_open_browser = 0
 let g:go_fmt_command = "goimports"
-
 
 "Unfold everything
 "au BufRead * normal zR
