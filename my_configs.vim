@@ -8,9 +8,9 @@ inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-Space>
 
 " tabs setup
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set nofullscreen
 
 nnoremap <F8> :TagbarToggle<CR>
@@ -112,4 +112,5 @@ iab utf! # -*- coding: utf-8 -*-
 let g:pymode_lint_ignore="E111,E302,E501,W601"
 let g:pymode_rope_goto_definition_cmd = 'vnew'
 
-colorscheme peaksea
+" colorscheme peaksea
+colorscheme ir_black
